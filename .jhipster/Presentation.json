@@ -1,0 +1,47 @@
+{
+    "name": "Presentation",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateCreated",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateUpdated",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "slide",
+            "otherEntityRelationshipName": "presentation",
+            "relationshipName": "slides"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "presentation",
+            "relationshipValidateRules": "required",
+            "relationshipName": "author",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200221131457",
+    "entityTableName": "presentation",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,20 @@
+{
+    "name": "BulletsIsBody",
+    "fields": [
+        {
+            "fieldName": "isMultiSelect",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200221131501",
+    "entityTableName": "bullets_is_body",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

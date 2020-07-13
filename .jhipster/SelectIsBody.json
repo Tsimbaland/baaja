@@ -1,0 +1,15 @@
+{
+    "name": "SelectIsBody",
+    "fields": [],
+    "relationships": [],
+    "changelogDate": "20200221131504",
+    "entityTableName": "select_is_body",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

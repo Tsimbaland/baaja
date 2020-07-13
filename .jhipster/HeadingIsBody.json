@@ -1,0 +1,15 @@
+{
+    "name": "HeadingIsBody",
+    "fields": [],
+    "relationships": [],
+    "changelogDate": "20200221131505",
+    "entityTableName": "heading_is_body",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

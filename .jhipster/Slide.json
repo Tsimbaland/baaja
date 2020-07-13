@@ -1,0 +1,45 @@
+{
+    "name": "Slide",
+    "fields": [
+        {
+            "fieldName": "order",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "SlideType",
+            "fieldValues": "SELECT_ANSWER,TYPE_ANSWER,HEADING,PARAGRAPH,BULLETS,IMAGE,BULLETS_WITH_IMAGE"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "body",
+            "otherEntityRelationshipName": "slide",
+            "relationshipName": "body",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "presentation",
+            "otherEntityRelationshipName": "slides",
+            "relationshipName": "presentation",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200221131458",
+    "entityTableName": "slide",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

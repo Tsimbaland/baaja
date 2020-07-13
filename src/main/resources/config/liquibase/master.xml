@@ -14,6 +14,17 @@
     <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200221131457_added_entity_Presentation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200221131458_added_entity_Slide.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200221131459_added_entity_Body.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200221131500_added_entity_ImageIsBody.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200221131501_added_entity_BulletsIsBody.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200221131502_added_entity_TypeIsBody.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200221131503_added_entity_ParagraphIsBody.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200221131504_added_entity_SelectIsBody.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200221131505_added_entity_HeadingIsBody.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20200221131457_added_entity_constraints_Presentation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200221131458_added_entity_constraints_Slide.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

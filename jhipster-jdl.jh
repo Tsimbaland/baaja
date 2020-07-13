@@ -1,0 +1,65 @@
+entity User {
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String
+}
+
+entity Presentation {
+	Title String,
+	dateCreated LocalDate,
+	dateUpdated LocalDate,
+    description String,
+}
+
+entity Slide {
+	order Long,
+	name String,
+	type SlideType
+}
+
+entity Body {
+}
+//exteds Body
+entity ImageIsBody {
+}
+//exteds Body
+entity BulletsIsBody {
+ 	isMultiSelect Boolean
+}
+//exteds Body
+entity TypeIsBody {
+}
+//exteds Body
+entity ParagraphIsBody {
+}
+//exteds Body
+entity SelectIsBody {
+}
+//exteds Body
+entity HeadingIsBody {
+}
+enum SlideType {
+  SELECT_ANSWER, TYPE_ANSWER, HEADING, PARAGRAPH, BULLETS, IMAGE, BULLETS_WITH_IMAGE
+}
+
+relationship OneToMany {
+	Presentation{slides} to Slide
+}
+
+relationship ManyToOne {
+	Presentation{author required} to User
+}
+
+relationship OneToOne {
+	Slide{body} to Body
+}
+
+// Set pagination options
+paginate Presentation with pagination
+
+// Use Data Transfert Objects (DTO)
+dto Presentation, Slide, Body with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except User, ImageIsBody, BulletsIsBody, TypeIsBody, ParagraphIsBody, SelectIsBody, HeadingIsBody
